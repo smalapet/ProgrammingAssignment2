@@ -4,6 +4,7 @@
 ## Write a short comment describing this function
 
 ## Example of input square matrix c=rbind(c(1, -1/4), c(-1/4, 1))
+## Test by execute command cacheSolve(makeCacheMatrix(c))
 
 ## Function makeCacheMatrix created for store matrix object value in an environment   
 makeCacheMatrix <- function(x = matrix()) {
@@ -34,7 +35,5 @@ cacheSolve <- function(x, ...) {
   }
   
   data <- x$get()
-  m <- solve(data, ...)
-  #x$setInverse(m)
-  m
+  solve(data, ...)
 }
